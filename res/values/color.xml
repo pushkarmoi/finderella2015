@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="ColorPrimary">#1976D2</color>
+    <color name="ColorPrimaryDark">#000000</color>
+    <color name="GreyColor">#9E9E9E</color>
+    <color name="FinderOff">#E0E0E0</color>
+    <color name="GreyLight">#ffddd8d6</color>
+    <color name="GreyText">#FF9B9B9B</color>
+
+
+</resources>

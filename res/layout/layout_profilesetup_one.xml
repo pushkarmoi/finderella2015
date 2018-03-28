@@ -1,0 +1,191 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ProfileSetup.ProfileSetupOne">
+
+    <RelativeLayout
+        android:id="@+id/relLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <com.twitter.sdk.android.core.identity.TwitterLoginButton
+            android:id="@+id/tw_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mProfileImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:src="@color/GreyLight" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mProfileImg"
+            android:layout_below="@+id/mProfileImg"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/firstName"
+            android:layout_toStartOf="@+id/firstName"
+            android:gravity="center_horizontal"
+            android:onClick="importProfilePic"
+            android:text="Import"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ColorPrimary" />
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/mProfileImg"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/mProfileImg"
+            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="First Name"
+            android:inputType="textCapWords" />
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignEnd="@+id/firstName"
+            android:layout_alignLeft="@+id/firstName"
+            android:layout_alignRight="@+id/firstName"
+            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="Last Name"
+            android:inputType="textCapWords" />
+
+        <EditText
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/lastName"
+            android:layout_alignLeft="@+id/textView5"
+            android:layout_alignRight="@+id/lastName"
+            android:layout_alignStart="@+id/textView5"
+            android:layout_below="@+id/textView5"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:hint="Hey there! Nice to meet you! "
+            android:inputType="textCapSentences"
+            android:maxLines="2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="40dp"
+            android:text="Add a status:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+
+
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ColorPrimary"
+            android:onClick="done"
+            android:text="Done>>"
+            android:textAllCaps="false"
+            android:textColor="#ffffffff"
+            android:textSize="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/editCommand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignEnd="@+id/firstName"
+            android:layout_alignRight="@+id/firstName"
+            android:layout_alignTop="@+id/textView5"
+            android:onClick="editStatus"
+            android:text="Edit"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ColorPrimary" />
+
+        <include
+            android:id="@+id/add_exp"
+            layout="@layout/add_expressions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_marginTop="60dp"
+            android:visibility="visible" />
+
+        <include
+            android:id="@+id/exp_view_view"
+            layout="@layout/expressions_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_marginTop="60dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/status"
+            android:layout_alignStart="@+id/status"
+            android:layout_below="@+id/textView5"
+            android:layout_marginTop="175dp"
+            android:text="Find me on "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView10"
+            android:layout_alignStart="@+id/textView10"
+            android:layout_below="@+id/textView10"
+            android:text="Add profiles to your Introduction"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <org.apmem.tools.layouts.FlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mFlowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView11"
+            android:background="#ffffffff"></org.apmem.tools.layouts.FlowLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/telView"
+        layout="@layout/layout_telephone_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>
+

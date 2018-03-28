@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="club.finderella.finderella"
+    android:versionCode="108"
+    android:versionName="1.08">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <permission
+        android:name="club.finderella.finderella.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="club.finderella.finderella.permission.C2D_MESSAGE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/launch_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Router"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name=".Services.BluetoothService" />
+        <service android:name=".Services.CleanseService" />
+        <service android:name=".Services.MediaSync" />
+        <service android:name=".Services.TextSync" />
+        <service android:name=".Services.FbDownloader" />
+
+
+        <service
+            android:name=".Services.GCMListener"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Services.GCMRegistrar"
+            android:exported="false" />
+        <service
+            android:name=".Services.GCMTokenRefreshListener"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+
+        <fragment
+            android:name=".IntroductionsFrag"
+            android:label="@string/title_activity_introductions_frag" />
+        <fragment
+            android:name=".BookmarksFrag"
+            android:label="@string/title_activity_bookmarks_frag" />
+        <fragment
+            android:name=".NotifsFrag"
+            android:label="@string/title_activity_notifs_frag" />
+        <fragment
+            android:name=".MyIntroFrag"
+            android:label="@string/title_activity_my_intro_frag" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="6868cf6f912a0ad8d8565aa05bca85b0f5482015" />
+
+        <activity
+            android:name=".Welcome"
+            android:label="@string/title_activity_welcome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProfileSetup.ProfileSetupOne"
+            android:label="@string/title_activity_profile_setup_one"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Temp"
+            android:label="@string/title_activity_temp" />
+        <activity
+            android:name=".Utilities.Browser"
+            android:label="@string/title_activity_browser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Utilities.ImageViewer"
+            android:label="@string/title_activity_full_image"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Utilities.BlockList"
+            android:label="@string/title_activity_block_list"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".Utilities.IntroductionViewer"
+            android:label="@string/title_activity_introduction_viewer"
+            android:screenOrientation="portrait"></activity>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Utilities.IntroDPViewer"
+            android:label="@string/title_activity_intro_dpviewer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Utilities.Help"
+            android:label="@string/title_activity_help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Coach.Coach"
+            android:label="@string/title_activity_finder_coach"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

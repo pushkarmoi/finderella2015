@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="club.finderella.finderella.Coach.IntroCoachFrag"
+    android:background="#ffffff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="At Finderella, we have Introductions"
+        android:id="@+id/topText"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=">>Tap to build one >>"
+        android:id="@+id/bottomText"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="80dp"
+        android:textColor="@color/ColorPrimary"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="190dp"
+        android:layout_height="320dp"
+        android:id="@+id/imageView13"
+        android:layout_gravity="right|center_vertical"
+        android:src="@drawable/mark_screened" />
+
+    <ImageView
+        android:layout_width="190dp"
+        android:layout_height="320dp"
+        android:id="@+id/imageView12"
+        android:layout_gravity="left|center_vertical"
+        android:src="@drawable/anna_screened" />
+
+</FrameLayout>

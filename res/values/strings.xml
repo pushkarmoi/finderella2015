@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Finderella</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_introductions_frag">IntroductionsFrag</string>
+    <string name="title_activity_bookmarks_frag">BookmarksFrag</string>
+    <string name="title_activity_notifs_frag">NotifsFrag</string>
+    <string name="title_activity_my_intro_frag">MyIntroFrag</string>
+    <string name="title_activity_authenticate">Authenticate</string>
+
+    <string name="facebook_app_id">1470069029988013</string>
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+
+    <string name="title_activity_welcome">Welcome</string>
+    <string name="title_activity_profile_setup_one">ProfileSetupOne</string>
+    <string name="title_activity_temp">temp</string>
+
+    <string name="DrawerOpened">Open</string>
+    <string name="DrawerClosed">Close</string>
+    <string name="title_activity_browser">Browser</string>
+    <string name="title_activity_full_image">FullImage</string>
+    <string name="title_activity_block_list">BlockList</string>
+    <string name="title_activity_introduction_viewer">IntroductionViewer</string>
+    <string name="title_activity_intro_dpviewer">IntroDPViewer</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_finder_coach">FinderCoach</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

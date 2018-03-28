@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="club.finderella.finderella.Coach.FinderCoachFrag"
+    android:background="#ffffff">
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:id="@+id/imageView11"
+        android:layout_gravity="center"
+        android:src="@drawable/finder_screened" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Keep your Finder On"
+        android:id="@+id/topText"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Doesn&apos;t require Internet to collect data"
+        android:id="@+id/bottomText"
+        android:layout_gravity="center_horizontal|bottom"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="50dp" />
+</FrameLayout>

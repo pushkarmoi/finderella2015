@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal|top"
+        android:background="@color/ColorPrimary" />
+
+    <club.finderella.finderella.CustomClasses.CircularImg xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mProfileImg"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="45dp"
+        android:background="@android:color/transparent"
+        android:src="@color/GreyLight" />
+
+    <TextView
+        android:id="@+id/mName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="70dp"
+        android:maxLines="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:id="@+id/mMetaData"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="105dp"
+        android:maxLines="1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/mLocation"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="130dp"
+        android:maxLines="1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/deleteImage"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/trash" />
+
+    <RelativeLayout
+        android:id="@+id/viewButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="200dp"
+        android:background="@color/GreyLight"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/eye_icon_black" />
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/topView"
+        layout="@layout/custom_bookmark_top"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center|top"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/undoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="100dp"
+        android:text="Undo"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffffff"
+        android:textSize="30dp"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/finderCircle"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/off_icon"
+        app:border_color="@android:color/transparent"
+        app:border_width="8dp"
+        android:paddingTop="30dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tap to turn on Finder"
+        android:id="@+id/finderText"
+        android:layout_gravity="left|center_vertical"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/finderCircle"
+        android:layout_alignLeft="@+id/finderCircle"
+        android:layout_alignStart="@+id/finderCircle"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
+        android:layout_alignRight="@+id/finderCircle"
+        android:layout_alignEnd="@+id/finderCircle"
+        android:maxLines="1"
+        android:gravity="center" />
+
+</RelativeLayout>

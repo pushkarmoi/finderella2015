@@ -1,0 +1,195 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    tools:context="club.finderella.finderella.MyIntroFrag">
+
+    <RelativeLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#ffffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/mGooglePlusButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.twitter.sdk.android.core.identity.TwitterLoginButton
+            android:id="@+id/tw_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mProfileImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:src="@color/GreyColor" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mProfileImg"
+            android:layout_toLeftOf="@+id/mName"
+            android:layout_toStartOf="@+id/mName"
+            android:gravity="center_horizontal"
+            android:text="Import"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ColorPrimary" />
+
+        <TextView
+            android:id="@+id/mName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/editCommand"
+            android:layout_alignRight="@+id/editCommand"
+            android:layout_alignTop="@+id/mProfileImg"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/mProfileImg"
+            android:layout_toStartOf="@+id/b1"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/mMetaData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mName"
+            android:layout_alignRight="@+id/mName"
+            android:layout_below="@+id/mName"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/mLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mMetaData"
+            android:layout_alignRight="@+id/mMetaData"
+
+            android:layout_below="@+id/mMetaData"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/mName"
+            android:layout_marginRight="10dp"
+            android:text="Edit"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ColorPrimary"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/textView2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/GreyColor"
+            android:visibility="invisible" />
+
+
+        <EditText
+            android:id="@+id/mStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_below="@+id/line1"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/editCommand"
+            android:layout_toStartOf="@+id/editCommand"
+            android:background="#ffffff"
+            android:hint="Hey there! Nice to meet you"
+            android:inputType="textCapSentences"
+            android:maxLines="2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/editCommand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/b1"
+            android:layout_alignTop="@+id/mStatus"
+            android:text="Edit"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ColorPrimary" />
+
+        <include
+            android:id="@+id/add_exp"
+            layout="@layout/add_expressions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:layout_marginTop="70dp"
+            android:visibility="visible" />
+
+        <include
+            android:id="@+id/exp_view_view"
+            layout="@layout/expressions_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:layout_marginTop="60dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mStatus"
+            android:layout_alignStart="@+id/mStatus"
+            android:layout_below="@+id/mStatus"
+            android:layout_marginTop="180dp"
+            android:text="Find me on "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView10"
+            android:layout_alignStart="@+id/textView10"
+            android:layout_below="@+id/textView10"
+            android:text="Add profiles to your Introduction"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <org.apmem.tools.layouts.FlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mFlowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView7"
+            android:background="#ffffffff"></org.apmem.tools.layouts.FlowLayout>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/telView"
+        layout="@layout/layout_telephone_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</FrameLayout>
